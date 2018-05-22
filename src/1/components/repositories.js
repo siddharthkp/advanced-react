@@ -1,42 +1,43 @@
 import React from 'react'
 
-const Repositories = () =>
+const Repositories = () => (
   <div className="section repositories">
     <div className="repo">
-      <a className="name" href="https://github.com/facebook/react">
-        react
+      <a className="name" href="https://github.com/siddharthkp">
+        a
       </a>
-      <div className="stars">74938</div>
+      <div className="stars">0</div>
       <div className="clear" />
     </div>
     <div className="repo">
-      <a className="name" href="https://github.com/facebook/react-native">
-        react-native
+      <a className="name" href="https://github.com/siddharthkp">
+        b
       </a>
-      <div className="stars">53028</div>
+      <div className="stars">0</div>
       <div className="clear" />
     </div>
     <div className="repo">
-      <a className="name" href="https://github.com/facebook/pop">
-        pop
+      <a className="name" href="https://github.com/siddharthkp">
+        c
       </a>
-      <span className="stars">18103</span>
+      <span className="stars">0</span>
       <div className="clear" />
     </div>
     <div className="repo">
-      <a className="name" href="https://github.com/facebook/fresco">
-        fresco
+      <a className="name" href="https://github.com/siddharthkp">
+        d
       </a>
-      <span className="stars">13369</span>
+      <span className="stars">0</span>
       <div className="clear" />
     </div>
     <div className="repo">
-      <a className="name" href="https://github.com/facebook/jest">
-        jest
+      <a className="name" href="https://github.com/siddharthkp">
+        e
       </a>
-      <span className="stars">11993</span>
+      <span className="stars">0</span>
       <div className="clear" />
     </div>
   </div>
+)
 
 export default Repositories
