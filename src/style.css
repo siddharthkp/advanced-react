@@ -4,6 +4,10 @@ body {
   background: #eee;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 input,
 button {
@@ -11,7 +15,7 @@ button {
 }
 
 .header {
-  height: 30px;
+  height: 50px;
   padding: 10px;
   margin-bottom: 50px;
   background: #fff;
@@ -80,6 +84,17 @@ button:hover,
   background: #229bbf;
 }
 
+button:disabled,
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:disabled:hover,
+.button:disabled:hover {
+  background: #2cc1ed;
+}
+
 img.avatar {
   height: 100px;
 }
@@ -111,6 +126,23 @@ img.avatar {
 .repo .stars::after {
   content: ' \2605';
   color: gold;
+}
+
+.user-form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 70px auto 0;
+  padding: 30px 50px;
+  width: 500px;
+  min-height: 100px;
+}
+
+.user-form .logo {
+  display: block;
+  margin: 30px auto;
 }
 
 .clear {
