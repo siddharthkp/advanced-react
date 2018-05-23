@@ -29,7 +29,8 @@ const data = {
     {
       name: 'fresco',
       stars: 13369,
-      description: 'An Android library for managing images and the memory they use.',
+      description:
+        'An Android library for managing images and the memory they use.',
       url: 'https://github.com/facebook/fresco'
     },
     {
