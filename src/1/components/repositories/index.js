@@ -1,17 +1,23 @@
 import React from 'react'
 import Repo from './repo'
 
-const Repositories = props => (
-  <div className="section repositories">
-    {props.data.repos.map(repo => (
-      <Repo
-        key={repo.name}
-        name={repo.name}
-        url={repo.url}
-        stars={repo.stars}
-      />
-    ))}
-  </div>
+import { Consumer } from '../../context'
+
+const Repositories = () => (
+  <Consumer>
+    {data => (
+      <div className="section repositories">
+        {data.repos.map(repo => (
+          <Repo
+            key={repo.name}
+            name={repo.name}
+            url={repo.url}
+            stars={repo.stars}
+          />
+        ))}
+      </div>
+    )}
+  </Consumer>
 )
 
 export default Repositories

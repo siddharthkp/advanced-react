@@ -5,6 +5,7 @@ import Header from './components/common/header'
 import UserInfo from './components/user-info'
 import UserForm from './components/user-form'
 import Repositories from './components/repositories'
+import { Provider } from './context'
 
 class App extends React.Component {
   constructor(props) {
@@ -19,16 +20,16 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Provider value={this.state.data}>
         <Header />
         <UserForm onSubmit={this.onSubmit} />
         {this.state.data ? (
           <div>
-            <UserInfo data={this.state.data} />
-            <Repositories data={this.state.data} />
+            <UserInfo />
+            <Repositories />
           </div>
         ) : null}
-      </div>
+      </Provider>
     )
   }
 }

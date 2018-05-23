@@ -1,5 +1,10 @@
 import React from 'react'
+import { Consumer } from '../../context'
 
-const Avatar = props => <img className="avatar" src={props.src} alt="avatar" />
+const Avatar = () => (
+  <Consumer>
+    {data => <img className="avatar" src={data.avatar} alt="avatar" />}
+  </Consumer>
+)
 
 export default Avatar

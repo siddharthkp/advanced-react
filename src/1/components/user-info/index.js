@@ -1,15 +1,20 @@
 import React from 'react'
 import Description from './description'
 import Avatar from './avatar'
+import { Consumer } from '../../context'
 
-const UserInfo = props => (
-  <div className="section user-info">
-    <Avatar src={props.data.avatar} />
-    <a className="name" href={props.data.url}>
-      {props.data.name}
-    </a>
-    <Description>{props.data.description}</Description>
-  </div>
+const UserInfo = () => (
+  <Consumer>
+    {data => (
+      <div className="section user-info">
+        <Avatar />
+        <a className="name" href={data.url}>
+          {data.name}
+        </a>
+        <Description />
+      </div>
+    )}
+  </Consumer>
 )
 
 export default UserInfo
