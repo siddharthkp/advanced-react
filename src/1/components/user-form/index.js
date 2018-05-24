@@ -5,29 +5,25 @@ import SmartSubmit from './smart-submit'
 class UserForm extends React.Component {
   onSubmit = event => {
     event.preventDefault()
-    this.props.onSubmit({ username: event.target[0].value })
+    this.props.onChange({ username: event.target[0].value })
   }
   render() {
     return (
       <form className="user-form" onSubmit={this.onSubmit}>
         <Logo big />
-        <SmartSubmit>
-          {(disabled, onChange) => (
-            <div>
-              <input
-                onChange={onChange}
-                type="text"
-                placeholder="github username"
-              />
-              <button type="submit" disabled={disabled}>
-                See profile
-              </button>
-            </div>
-          )}
-        </SmartSubmit>
+        <div>
+          <input
+            onChange={this.props.onChange}
+            type="text"
+            placeholder="github username"
+          />
+          <button type="submit" disabled={this.props.disabled}>
+            See profile
+          </button>
+        </div>
       </form>
     )
   }
 }
 
-export default UserForm
+export default SmartSubmit(UserForm)

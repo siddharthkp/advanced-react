@@ -5,14 +5,14 @@ import Header from './components/common/header'
 import UserInfo from './components/user-info'
 import UserForm from './components/user-form'
 import Repositories from './components/repositories'
-import { Provider } from './context'
+import { Provider } from './store'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = { username: '', data: null }
   }
-  onSubmit = ({ username }) => {
+  onChange = ({ username }) => {
     this.setState({ username })
     axios
       .get(`https://github-user.now.sh/?username=${username}`)
@@ -22,7 +22,7 @@ class App extends React.Component {
     return (
       <Provider value={this.state.data}>
         <Header />
-        <UserForm onSubmit={this.onSubmit} />
+        <UserForm onChange={this.onChange} />
         {this.state.data ? (
           <div>
             <UserInfo />

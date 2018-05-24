@@ -1,7 +1,7 @@
 import React from 'react'
 import Repo from './repo'
 
-import { Consumer } from '../../context'
+import { Consumer } from '../../store'
 
 const Repositories = () => (
   <Consumer>

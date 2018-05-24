@@ -1,7 +1,7 @@
 import React from 'react'
 import Description from './description'
 import Avatar from './avatar'
-import { Consumer } from '../../context'
+import { Consumer } from '../../store'
 
 const UserInfo = () => (
   <Consumer>
