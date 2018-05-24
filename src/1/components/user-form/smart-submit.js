@@ -13,20 +13,11 @@ class SmartSubmit extends React.Component {
     this.props.onSubmit({ value: this.state.value })
   }
   render() {
-    const Component = this.props.Component
-
-    return (
-      <Component
-        {...this.props}
-        SmartSubmit_disabled={!this.state.value.length}
-        onChange={this.onChange}
-      />
-    )
+    return this.props.children({
+      disabled: !this.state.value.length,
+      onChange: this.onChange
+    })
   }
 }
 
-const SmartSubmitHOC = Component => {
-  return props => <SmartSubmit Component={Component} {...props} />
-}
-
-export default SmartSubmitHOC
+export default SmartSubmit

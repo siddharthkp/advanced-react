@@ -11,19 +11,23 @@ class UserForm extends React.Component {
     return (
       <form className="user-form" onSubmit={this.onSubmit}>
         <Logo big />
-        <div>
-          <input
-            onChange={this.props.onChange}
-            type="text"
-            placeholder="github username"
-          />
-          <button type="submit" disabled={this.props.disabled}>
-            See profile
-          </button>
-        </div>
+        <SmartSubmit>
+          {({ disabled, onChange }) => (
+            <div>
+              <input
+                onChange={onChange}
+                type="text"
+                placeholder="github username"
+              />
+              <button type="submit" disabled={disabled}>
+                See profile
+              </button>
+            </div>
+          )}
+        </SmartSubmit>
       </form>
     )
   }
 }
 
-export default SmartSubmit(UserForm)
+export default UserForm
