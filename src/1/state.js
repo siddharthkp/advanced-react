@@ -9,15 +9,17 @@ class State extends React.Component {
     this.state = { data: {} }
   }
   onChange = ({ username }) => {
+    this.setState({ data: {} })
     axios
       .get(`https://github-user.now.sh/?username=${username}`)
-      .then(response => this.setState({ data: response.data }))
+      .then(response => this.dispatch('USER_CHANGE_COMPLETE', response.data))
   }
   dispatch = (action, data) => {
-    if (action === 'USER_CHANGED') this.onChange(data)
+    if (action === 'USER_CHANGE_INIT') this.onChange(data)
+    else if (action === 'USER_CHANGE_COMPLETE') this.setState({ data })
   }
   componentDidMount() {
-    this.dispatch('USER_CHANGED', { username: 'siddharthkp' })
+    this.dispatch('USER_CHANGE_INIT', { username: 'siddharthkp' })
   }
   render() {
     const store = Object.assign(

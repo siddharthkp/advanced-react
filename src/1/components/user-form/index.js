@@ -6,7 +6,7 @@ import { Consumer } from '../../state'
 class UserForm extends React.Component {
   onSubmit = (event, dispatch) => {
     event.preventDefault()
-    dispatch('USER_CHANGED', { username: event.target[0].value })
+    dispatch('USER_CHANGE_INIT', { username: event.target[0].value })
   }
   render() {
     return (

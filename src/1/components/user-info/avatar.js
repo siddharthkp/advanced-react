@@ -1,9 +1,19 @@
 import React from 'react'
 import { Consumer } from '../../state'
+import styled from 'styled-components'
+
+const StyledImage = styled.img`
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+`
 
 const Avatar = () => (
   <Consumer>
-    {({ data }) => <img className="avatar" src={data.avatar} alt="avatar" />}
+    {({ data }) => {
+      const src = data.avatar || 'grey.png'
+      return <StyledImage src={src} alt="avatar" />
+    }}
   </Consumer>
 )
 

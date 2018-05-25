@@ -1,23 +1,31 @@
 import React from 'react'
 import Repo from './repo'
+import Loading from '../common/loading'
 
 import { Consumer } from '../../state'
 
+const fakeRepos = [[], [], [], [], []]
+
 const Repositories = () => (
   <Consumer>
-    {({ data }) => (
-      <div className="section repositories">
-        {data.repos.map(repo => (
-          <Repo
-            key={repo.name}
-            name={repo.name}
-            url={repo.url}
-            description={repo.description}
-            stars={repo.stars}
-          />
-        ))}
-      </div>
-    )}
+    {({ data }) => {
+      const repos = data.repos || fakeRepos
+      return (
+        <div className="section repositories">
+          {repos.map(repo => (
+            <Loading height="50px" empty={!repo.name}>
+              <Repo
+                key={repo.name}
+                name={repo.name}
+                url={repo.url}
+                description={repo.description}
+                stars={repo.stars}
+              />
+            </Loading>
+          ))}
+        </div>
+      )
+    }}
   </Consumer>
 )
 

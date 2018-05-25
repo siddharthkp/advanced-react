@@ -97,6 +97,7 @@ button:disabled:hover,
 
 img.avatar {
   height: 100px;
+  border-radius: 5px;
 }
 
 .user-info .name {

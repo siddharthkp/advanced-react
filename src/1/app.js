@@ -13,12 +13,8 @@ const App = () => {
         <div>
           <Header />
           <UserForm />
-          {data.repos ? (
-            <div>
-              <UserInfo />
-              <Repositories />
-            </div>
-          ) : null}
+          <UserInfo />
+          <Repositories />
         </div>
       )}
     </Consumer>
