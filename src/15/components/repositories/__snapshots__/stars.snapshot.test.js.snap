@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Works 1`] = `
+.c0 {
+  float: right;
+}
+
+.c0::after {
+  content: ' \\2605';
+  color: gold;
+}
+
+<div
+  className="c0"
+>
+  24
+</div>
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Smart submit 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+  />
+  <button
+    disabled={true}
+    type="submit"
+  >
+    click me
+  </button>
+</div>
+`;
+
+exports[`Smart submit 2`] = `
+<div>
+  <input
+    onChange={[Function]}
+  />
+  <button
+    disabled={false}
+    type="submit"
+  >
+    click me
+  </button>
+</div>
+`;
+
+exports[`Smart submit 3`] = `
+<div>
+  <input
+    onChange={[Function]}
+  />
+  <button
+    disabled={true}
+    type="submit"
+  >
+    click me
+  </button>
+</div>
+`;
