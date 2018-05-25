@@ -1,4 +1,5 @@
 import React from 'react'
+import Description from './description'
 import Stars from './stars'
 
 const Repo = props => (
@@ -7,6 +8,7 @@ const Repo = props => (
       {props.name}
     </a>
     <Stars className="stars" stars={props.stars} />
+    <Description className="description">{props.description}</Description>
   </div>
 )
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Consumer } from '../../store'
+import { Consumer } from '../../state'
 
 const Avatar = () => (
   <Consumer>
-    {data => <img className="avatar" src={data.avatar} alt="avatar" />}
+    {({ data }) => <img className="avatar" src={data.avatar} alt="avatar" />}
   </Consumer>
 )
 

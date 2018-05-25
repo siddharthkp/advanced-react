@@ -1,11 +1,11 @@
 import React from 'react'
 import Description from './description'
 import Avatar from './avatar'
-import { Consumer } from '../../store'
+import { Consumer } from '../../state'
 
 const UserInfo = () => (
   <Consumer>
-    {data => (
+    {({ data }) => (
       <div className="section user-info">
         <Avatar />
         <a className="name" href={data.url}>

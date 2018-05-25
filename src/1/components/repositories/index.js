@@ -1,17 +1,18 @@
 import React from 'react'
 import Repo from './repo'
 
-import { Consumer } from '../../store'
+import { Consumer } from '../../state'
 
 const Repositories = () => (
   <Consumer>
-    {data => (
+    {({ data }) => (
       <div className="section repositories">
         {data.repos.map(repo => (
           <Repo
             key={repo.name}
             name={repo.name}
             url={repo.url}
+            description={repo.description}
             stars={repo.stars}
           />
         ))}
