@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "0.18.0",
+    "babel-loader": "7.1.4",
+    "express": "4.16.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
@@ -15,6 +17,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "docs": "styleguidist server",
+    "build:server": "webpack --config=config/webpack.server.js",
+    "build:client": "webpack --config=config/webpack.client.js",
+    "start:server": "node server/dist/server",
     "prod": "serve build"
   },
   "devDependencies": {
@@ -22,6 +27,7 @@
     "enzyme-adapter-react-16": "1.1.1",
     "jest-styled-components": "5.0.1",
     "react-test-renderer": "16.4.0",
-    "serve": "6.5.8"
+    "serve": "6.5.8",
+    "webpack-node-externals": "1.7.2"
   }
 }

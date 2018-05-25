@@ -80,3 +80,7 @@ typings/
 
 # next.js build output
 .next
+
+# compiled files
+server/dist
+public/main.js

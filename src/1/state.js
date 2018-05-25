@@ -6,7 +6,7 @@ const { Provider, Consumer } = React.createContext({})
 class State extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { data: {} }
+    this.state = { data: props.initialData || window.INITIAL_DATA || {} }
   }
   onChange = ({ username }) => {
     this.setState({ data: {} })
@@ -19,7 +19,7 @@ class State extends React.Component {
     else if (action === 'USER_CHANGE_COMPLETE') this.setState({ data })
   }
   componentDidMount() {
-    this.dispatch('USER_CHANGE_INIT', { username: 'siddharthkp' })
+    // this.dispatch('USER_CHANGE_INIT', { username: 'siddharthkp' })
   }
   render() {
     const store = Object.assign(

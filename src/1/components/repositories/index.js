@@ -12,8 +12,8 @@ const Repositories = () => (
       const repos = data.repos || fakeRepos
       return (
         <div className="section repositories">
-          {repos.map(repo => (
-            <Loading height="50px" empty={!repo.name}>
+          {repos.map((repo, index) => (
+            <Loading key={index} height="50px" empty={!repo.name}>
               <Repo
                 key={repo.name}
                 name={repo.name}

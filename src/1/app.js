@@ -4,20 +4,23 @@ import Header from './components/common/header'
 import UserInfo from './components/user-info'
 import UserForm from './components/user-form'
 import Repositories from './components/repositories'
-import { Consumer } from './state'
+import State, { Consumer } from './state'
+import './style.js'
 
-const App = () => {
+const App = props => {
   return (
-    <Consumer>
-      {({ data }) => (
-        <div>
-          <Header />
-          <UserForm />
-          <UserInfo />
-          <Repositories />
-        </div>
-      )}
-    </Consumer>
+    <State initialData={props.initialData}>
+      <Consumer>
+        {({ data }) => (
+          <div>
+            <Header />
+            <UserForm />
+            <UserInfo />
+            <Repositories />
+          </div>
+        )}
+      </Consumer>
+    </State>
   )
 }
 
