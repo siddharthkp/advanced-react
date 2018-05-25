@@ -15,5 +15,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "docs": "styleguidist server"
+  },
+  "devDependencies": {
+    "enzyme": "3.3.0",
+    "react-test-renderer": "16.4.0"
   }
 }
