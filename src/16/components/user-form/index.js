@@ -11,7 +11,7 @@ class UserForm extends React.Component {
   render() {
     return (
       <Consumer>
-        {({ data, dispatch }) => (
+        {({ dispatch }) => (
           <form
             className="user-form"
             onSubmit={event => this.onSubmit(event, dispatch)}>
