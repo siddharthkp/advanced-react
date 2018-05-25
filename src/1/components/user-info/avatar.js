@@ -6,6 +6,7 @@ const StyledImage = styled.img`
   height: 100px;
   width: 100px;
   border-radius: 5px;
+  background: #eee;
 `
 
 const Avatar = () => (
