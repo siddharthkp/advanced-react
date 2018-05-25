@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Disabled by default 1`] = `
+exports[`Smart submit 1`] = `
 <div>
   <input
     onChange={[Function]}
@@ -12,9 +12,9 @@ exports[`Disabled by default 1`] = `
     click me
   </button>
 </div>
-`
+`;
 
-exports[`Disabled by default 2`] = `
+exports[`Smart submit 2`] = `
 <div>
   <input
     onChange={[Function]}
@@ -26,9 +26,9 @@ exports[`Disabled by default 2`] = `
     click me
   </button>
 </div>
-`
+`;
 
-exports[`Disabled by default 3`] = `
+exports[`Smart submit 3`] = `
 <div>
   <input
     onChange={[Function]}
@@ -40,4 +40,4 @@ exports[`Disabled by default 3`] = `
     click me
   </button>
 </div>
-`
+`;

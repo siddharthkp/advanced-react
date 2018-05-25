@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import SmartSubmit from './smart-submit'
 
-test('Disabled by default', () => {
+test('Smart submit', () => {
   const component = renderer.create(
     <SmartSubmit>
       {({ disabled, onChange }) => {
