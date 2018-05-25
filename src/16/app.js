@@ -6,6 +6,12 @@ import UserForm from './components/user-form'
 import Repositories from './components/repositories'
 import State, { Consumer } from './state'
 
+// const { registerObserver } = require('react-perf-devtool')
+// registerObserver()
+
+// import { whyDidYouUpdate } from 'why-did-you-update'
+// whyDidYouUpdate(React)
+
 const App = props => {
   return (
     <State initialData={props.initialData}>

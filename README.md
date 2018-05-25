@@ -13,5 +13,5 @@
 13 - presentation tests
 14 - logical tests
 15 - loading states
-16 - ssr
-17 - perf-devtool, bundle-analyzer
+16 - perf-devtool => why did you update => bundle-analyzer => ssr
+17 - game
