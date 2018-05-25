@@ -16,7 +16,7 @@ const Stars = props => <StyledStar>{props.stars}</StyledStar>
 
 Stars.propTypes = {
   /** How many stars to show */
-  stars: PropTypes.number.isRequired
+  stars: PropTypes.number
 }
 
 export default Stars

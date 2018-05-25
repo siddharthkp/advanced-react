@@ -19,7 +19,7 @@ class State extends React.Component {
     else if (action === 'USER_CHANGE_COMPLETE') this.setState({ data })
   }
   componentDidMount() {
-    // this.dispatch('USER_CHANGE_INIT', { username: 'siddharthkp' })
+    this.dispatch('USER_CHANGE_INIT', { username: 'siddharthkp' })
   }
   render() {
     const store = Object.assign(
