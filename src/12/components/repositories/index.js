@@ -14,7 +14,9 @@ const Repositories = () => (
               key={repo.name}
               name={repo.name}
               url={repo.url}
-              description={repo.description}
+              description={
+                repo.description
+              }
               stars={repo.stars}
             />
           ))}
